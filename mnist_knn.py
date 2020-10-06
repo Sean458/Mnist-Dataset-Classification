@@ -41,11 +41,10 @@ print("Choosing 5 random digits and testing to see models prediction...")
 #Looping over random digits to see the models prediction
 
 for i in np.random.randint(0, high=len(testLabels), size=(5,)):
-         # grab the image and classify it
          image = testData[i]
          prediction = model.predict([image])[0]
-         # show the prediction
          
+          # show the prediction
          imgdata = np.array(image, dtype='float')
          pixels = imgdata.reshape((8,8))
          plt.imshow(pixels,cmap='gray')
